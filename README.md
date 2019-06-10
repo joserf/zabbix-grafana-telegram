@@ -9,7 +9,7 @@ Ambiente de instalação:
 GNU/Linux Ubuntu 14.04LTS Server (como servidor de internet e hostname srvInternet)
 Zabbix Server IP: 192.168.0.126
 
-Istalação dos pacotes:
+Instalação dos pacotes:
 
     $ sudo apt-get update && sudo apt-get install zabbix-agent python-pip -y && sudo pip install speedtest-cli 
     
