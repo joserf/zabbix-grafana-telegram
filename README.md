@@ -21,19 +21,13 @@ Arquivo de configuração do Zabbix
 
     $ sudo sed -i 75i\LogRemoteCommands=1 /etc/zabbix/zabbix_agentd.conf
 
+    $ sudo sed -i "s/Server=127.0.0.1/Server=192.168.0.126/" /etc/zabbix/zabbix_agentd.conf
+
+    $ sudo sed -i "s/ServerActive=127.0.0.1/ServerActive=192.168.0.126/" /etc/zabbix/zabbix_agentd.conf
+
+    $ sudo sed -i "s/Hostname=Zabbix\ server/Hostname=$HOSTNAME/" /etc/zabbix/zabbix_agentd.conf
+
     $ sudo vim /etc/zabbix/zabbix_agentd.conf
-
-Linha 88
-
-    Server=192.168.0.126
-
-Linha 129
-    
-    ServerActive=192.168.0.126
-
-Linha 140
-    
-    Hostname=srvInternet
 
 Linha 273
 
@@ -101,4 +95,4 @@ USER=""
 
 Os testes são efetuados de 30 em 30 minutos, e as mensagens via Telegram às 08:55, 11:55 e 16:55. 
 
-Importe o template "Template Teste de velocidade de internet.xml" para o Zabbix e o json "Monitoramento de Link.json" para o Grafana.
+Importe o template "Template Teste de velocidade de internet.xml" para o Zabbix e o "Monitoramento de Link.json" para o Grafana.
