@@ -1,5 +1,7 @@
 # zabbix-grafana-telegram
 
+<img src=MonitoramentoV1.0.png/></a>
+
 Vamos configurar o servidor de internet para monitorar a internet da empresa, com Zabbix, Grafana e Telegram. O Telegram vai enviar mensagens com o teste de velocidade para o grupo.
 
 Ambiente de instalação: 
