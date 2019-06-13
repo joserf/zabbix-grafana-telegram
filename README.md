@@ -31,11 +31,13 @@ Arquivo de configuração do Zabbix
 
 Linha 273
 
+    UserParameter=wanip[*],cat /tmp/speedtest.txt | grep "Testing from" | cut -d"(" -f2 | cut -d")" -f1
     UserParameter=data[*],cat /tmp/speedtest.txt | grep "Data:" | cut -d " " -f2
     UserParameter=upload[*],cat /tmp/speedtest.txt | grep "Upload:" | cut -d " " -f2
     UserParameter=download[*],cat /tmp/speedtest.txt | grep "Download:" | cut -d " " -f2
     UserParameter=servidor[*],cat /tmp/speedtest.txt | grep "Hosted" | cut -c 11-
-    UserParameter=ping[*],cat /tmp/speedtest.txt | grep "Hosted" | cut -d " " -f7
+    UserParameter=ping[*],cat /tmp/speedtest.txt | grep "Hosted" | cut -d ":" -f2 | cut -d" " -f2
+
     
 Reiniciar o zabbix
 
